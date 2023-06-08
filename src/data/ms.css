@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+:root {
+    --bc: #15151b;
+    --text: #fefefd;
+    --alt-text: #aeaead;
+    --main: #fefe00;
+    --sec: #29282d;
+    --acc: #fdfe00; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bc);
+    color: var(--text);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.headStrip {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    margin-bottom: -300px;
+}
+
+.headStrip h1 {
+    font-size: 3em;
+    color: var(--main);
+}
+
+.headStrip p {
+    font-size: 2em;
+}
+
+
+.feat {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    margin-top: -10px;
+    height: 800px;
+    background-color: var(--main);
+    color: var(--sec);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    overflow:auto;
+    white-space:nowrap;
+}
+
+
+.feat a {
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 20px 70px;
+    background-size: cover;
+    color: var(--);
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 80%;
+    width: 20%;
+}
+
+.feat div img {
+    
+}
+
+.new {
+    background-color: var(--bc);
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 20px 20px 0 0;
+    margin-top: -60px;
+    z-index: 2;
+}
+
+.new div {
+    font-size: 2em;
+    width: 95%;
+    border-radius: 10px;
+    background-color: var(--sec);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin: 40px 0px 20px 0px;
+}
+
+.new p {
+    color: var(--alt-text);
+    margin-left: 40px;
+}
+    
+.new img {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+}
+
