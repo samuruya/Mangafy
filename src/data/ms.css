@@ -39,6 +39,60 @@ body {
     font-size: 2em;
 }
 
+.headStripR div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.headStripR div h1 {
+    background-color: var(--sec);
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 3em;
+    text-align: center;
+    color: var(--main);
+}
+
+.headStripR div a {
+    font-size: 3em;
+    text-decoration: none;
+    background-color: var(--acc);
+    color: var(--sec);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: ease-out 200ms;
+}
+
+.headStripR div a:hover {
+    transform: scale(1.1);
+    transition: ease-in 200ms;
+}
+
+.headStripR div p {
+    color: var(--alt-text);
+    margin-top: 20px;
+    font-size: 0.5em;
+}
+
+
+.pageCont {
+    margin: 20px 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageCont img {
+    width: 50vw;
+    border-radius: 20px;
+}
 
 .feat {
     padding-top: 30px;
@@ -47,31 +101,38 @@ body {
     height: 800px;
     background-color: var(--main);
     color: var(--sec);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    overflow:auto;
-    white-space:nowrap;
+    overflow-y: scroll;
+    white-space: nowrap;
+}
+
+.featT {
+    text-align: center;
+    margin-top: -10px;
+    width: 100vw;
+    padding: 50px 0 40px 0;
+    font-size: 3em;
+    background-color: var(--main);
+    color: #15151b;
 }
 
 
-.feat a {
+
+.card {
     font-size: 2em;
     text-transform: uppercase;
-    padding: 20px 70px;
     background-size: cover;
-    color: var(--);
+    color: var(--sec);
+    border: none;
     border-radius: 15px;
-    margin-right: 10px;
-    margin-left: 10px;
-    height: 80%;
-    width: 20%;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 100%;
+    width: 30%;
 }
 
-.feat div img {
-    
+.card button {
+    width: 100%;
+    height: 100%;
 }
 
 .new {
@@ -83,16 +144,24 @@ body {
     z-index: 2;
 }
 
-.new div {
+.new button  {
+    border: none;
     font-size: 2em;
     width: 95%;
     border-radius: 10px;
     background-color: var(--sec);
+    color: var(--acc);
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 20px;
     margin: 40px 0px 20px 0px;
+}
+
+.new h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 20px 0 20px 0;
 }
 
 .new p {
@@ -103,7 +172,7 @@ body {
 .new img {
     margin-right: 20px;
     margin-left: 20px;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
 }
 

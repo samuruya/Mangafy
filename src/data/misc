@@ -1,0 +1,30 @@
+const vault = [
+    {   
+        "name" : "OverKill",
+        "disc":"Ash the main character is a modern day demon hunter",
+        "thumb":"https://i.ibb.co/Svt1SVr/kid-cover.png"
+    },
+    {   "name" : "Kid", 
+        "disc":"a 17 year old kickboxer start a gang at school",
+        "thumb":"https://i.ibb.co/Svt1SVr/kid-cover.png"
+    },
+    {   "name" : "Godlike",
+        "disc":"shit post with random popculture characters",
+        "thumb":"https://i.ibb.co/8KvBtfB/covervol1.png"
+    },
+    
+ ];
+
+
+var chI = [];
+var chIE = [];
+fetch('./data/chest.json')
+.then(chest => chest.json())
+.then(data => {
+    chI = data;
+})
+.catch(error => console.log('error'))
+console.log();
+
+
+console.log(JSON.parse(chI));
