@@ -89,9 +89,23 @@ function render_client() {
 }
 
 function read_ent(mID) {
-
     if(mID >= 0) {
         window.location.href = `read.html?mID=${vault['manga'][mID].name}&chap=${0}`;
     }
 }
 
+
+
+function render_list() {
+    for(const i in vault['manga']) {
+        console.log(vault['manga'][i].name);
+        const div = document.createElement(`button`);
+        div.innerHTML = `
+                            <img src="${vault['manga'][i].thumb}" alt="">
+                            <h2>${vault['manga'][i].name}</h2>
+                            <p>${vault['manga'][i].disc}</p>
+                        `;
+        div.onclick = function(){read_ent(i)};
+        document.getElementById(`list`).appendChild(div);
+    }
+}

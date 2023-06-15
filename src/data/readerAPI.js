@@ -2,10 +2,10 @@
 const qs = window.location.search;
 const cache = new URLSearchParams(qs)
 const rID = cache.get('mID');
-const cID = cache.get('chap');
+var cID = cache.get('chap');
 
 function render_setup() {
-    console.log(vault['manga'][2]['contents'].length);
+
 
     for(var i in vault['manga']) {
         if(vault['manga'][i].name == rID) {
@@ -35,9 +35,26 @@ function render_setup() {
 }
 
 function pchap(){
-    cID = cID + 1;
+    cID++;
+    for(var x in vault['manga']) {
+        if(rID == vault['manga'][x].name && !(cID > vault['manga'][x]['contents'].length -1)) {
+            window.location.href = `read.html?mID=${vault['manga'][x].name}&chap=${cID}`;
+        }
+    }
+    if(cID > vault['manga'][x]['contents'].length -1) {
+        cID--;
+    }
 }
 
 function mchap(){
+    cID--;
+    for(var x in vault['manga']) {
+        if(rID == vault['manga'][x].name && !(cID < 0)) {
+            window.location.href = `read.html?mID=${vault['manga'][x].name}&chap=${cID}`;
+        }
+        if (cID < 0) {
+            cID++;
+        }
+    }
 
 }

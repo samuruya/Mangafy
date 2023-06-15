@@ -20,19 +20,145 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+
+
+.mainav {
+    text-transform: uppercase;
+    padding-top: 30px;
+    margin-top: -10px;
+    background-color: var(--main);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 3em;
+    gap: 100px
+}
+
+.mainav a {
+    color: var(--sec);
+    text-decoration: none;
+    transition: ease-out 50ms;
+}
+
+.mainav a:hover {
+    color: var(--alt-text);
+    transform: scale(1.4);
+    margin: 0 50px;
+    transition: ease-in 5s0ms;
+}
+
+.read-nav {
+    background-color: var(--sec);
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.read-nav img {
+    width: 50px;
+}
+
+.read-nav-logo {
+    color: var(--main);
+    font-size: 50px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+}
+
+.read-nav-nav {
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.read-nav-nav a {
+    color: #aeaead;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.read-nav-btn {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+}
+
+.read-nav-btn button {
+    background-color: var(--acc);
+    color: var(--bc);
+    margin-left: 20px;
+    border-radius: 20px;
+    font-size: 2em;
+    border: none;
+    padding: 10px 70px;
+}
+
+.list {
+    width: 100%;
+}
+
+.list img {
+    height: 100px;
+}
+
+.list button {
+    background-color: var(--sec);
+    padding: 20px 0;
+    font-size: 2em;
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: left;
+    gap: 50px;
+    padding-left: 50px;
+    transition: ease-out 50ms;
+}
+
+.list button:hover {
+    gap: 20px;
+    background-color: var(--alt-text);
+    padding: 30px 60px;
+    transition: ease-in 50ms;
+}
+
+
 .headStrip {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 400px;
     margin-bottom: -300px;
 }
 
 .headStrip h1 {
     font-size: 3em;
     color: var(--main);
+}
+
+.headStrip div {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-content: baseline;
 }
 
 .headStrip p {
@@ -79,7 +205,6 @@ body {
     font-size: 0.5em;
 }
 
-
 .pageCont {
     margin: 20px 0 0 0;
     width: 100%;
@@ -109,13 +234,11 @@ body {
     text-align: center;
     margin-top: -10px;
     width: 100vw;
-    padding: 50px 0 40px 0;
-    font-size: 3em;
+    padding: 300px 0 40px 0;
+    font-size: 4em;
     background-color: var(--main);
     color: #15151b;
 }
-
-
 
 .card {
     font-size: 2em;
@@ -176,3 +299,25 @@ body {
     height: 100px;
 }
 
+.chap-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chap-nav button {
+    font-size: 2em;
+    border-radius: 20px;
+    color: var(--sec);
+    background-color: var(--acc);
+    border: none;
+    padding: 20px;
+    margin: 20px;
+    transition: ease-out 100ms;
+}
+
+.chap-nav button:hover {
+    transform: scale(1.1);
+    transition: ease-in 100ms;
+}
