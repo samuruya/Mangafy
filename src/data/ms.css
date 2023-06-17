@@ -233,7 +233,7 @@ body {
 .featT {
     text-align: center;
     margin-top: -10px;
-    width: 100vw;
+    width: 100%;
     padding: 300px 0 40px 0;
     font-size: 4em;
     background-color: var(--main);
