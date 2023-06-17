@@ -9,7 +9,7 @@ var vault = {
         {   
             "name" : "OverKill",
             "disc":"Ash the main character is a modern day demon hunter",
-            "thumb":"https://i.ibb.co/Svt1SVr/kid-cover.png",
+            "thumb":"https://i.ibb.co/XYpbYJ1/Overkillcover.png",
             "contents": [
 
             ]
@@ -102,8 +102,10 @@ function render_list() {
         const div = document.createElement(`button`);
         div.innerHTML = `
                             <img src="${vault['manga'][i].thumb}" alt="">
-                            <h2>${vault['manga'][i].name}</h2>
-                            <p>${vault['manga'][i].disc}</p>
+                            <div>
+                                <h2>${vault['manga'][i].name}</h2>
+                                <p>${vault['manga'][i].disc}</p>
+                            </div>
                         `;
         div.onclick = function(){read_ent(i)};
         document.getElementById(`list`).appendChild(div);

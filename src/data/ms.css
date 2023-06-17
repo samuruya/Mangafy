@@ -50,7 +50,8 @@ body {
 }
 
 .read-nav {
-    background-color: var(--sec);
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--bc);
     text-transform: uppercase;
     width: 100%;
     display: flex;
@@ -87,6 +88,13 @@ body {
     color: #aeaead;
     margin: 0 20px;
     text-decoration: none;
+    transition: ease-out 50ms;
+}
+
+.read-nav-nav a:hover {
+    transform: scale(1.2);
+    color: var(--acc);
+    transition: ease-in 50ms;
 }
 
 .read-nav-btn {
@@ -106,14 +114,48 @@ body {
     font-size: 2em;
     border: none;
     padding: 10px 70px;
+    transition: ease-out 50ms;
+}
+
+.read-nav-btn button:hover{
+    transform: scale(1.1);
+    background-color: var(--main);
+    transition: ease-in 50ms;
+}
+
+
+.list-title {
+    font-size: 2em;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .list img {
     height: 100px;
+    width: 60px;
+}
+
+.list div {
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--text);
+    background-color: var(--sec);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 20px;
 }
 
 .list button {
@@ -133,10 +175,11 @@ body {
 
 .list button:hover {
     gap: 20px;
-    background-color: var(--alt-text);
+    background-color: var(--main);
     padding: 30px 60px;
     transition: ease-in 50ms;
 }
+
 
 
 .headStrip {
