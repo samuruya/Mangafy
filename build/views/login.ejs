@@ -1,0 +1,38 @@
+<title>AetherHub</title>
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="favicon.ico?v=1.1">
+<body>
+    <nav class="read-nav">
+        <a href="/" class="read-nav-logo">                    
+                UC-FS
+        </a>
+    </nav>
+
+    <div class="login">
+        
+            <div class="title-log">
+                <h1 >login</h1>
+            </div>
+            <div class="body-log">
+                <h1>Welcome back!</h1>
+                <form action="/api/login" method="POST" class="login-form">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="log-btn">
+                        <button type="submit">Enter</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="switch-log">
+                <p class="signup">Dont have an account? <a href="/register">Sign up</a></p>
+            </div>
+    </div>
+</body>
