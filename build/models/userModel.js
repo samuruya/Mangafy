@@ -1,13 +1,13 @@
-const mongoose = require("mongoose")
+
+const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
     {
         tag: {
-            type: String,
-            required: true,
+            type: String, 
+            required: true, 
             minlength: 3,
-            maxlength: 12,
-            unique: true
+            maxlength: 12
         },
         email: {
             type: String, 
@@ -37,8 +37,8 @@ const userSchema = new mongoose.Schema(
     }, {
         timestamps: true,
     }
-)
+);
 
-const userModel = mongoose.model("user", userSchema);
+const userModel = mongoose.model("User", userSchema)
 
 module.exports = userModel
