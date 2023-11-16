@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
   const cors = require("cors")
   const mongoose = require('mongoose')
   const userRoute = require("./Routes/userRoute")
+  const mangaRoute = require("./Routes/mangaRoute")
   const app = express()
   
   const port = process.env.PORT || 2020;
@@ -22,6 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(express.json())
   app.use(cors())
   app.use("/api/users", userRoute);
+  app.use("/api/m", mangaRoute)
   
   app.listen(port, (req, res) => {
       console.log(`server is running on: ${port}`);

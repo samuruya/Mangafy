@@ -20,11 +20,15 @@ export const AuthContextProvider = ({ children }) => {
         email: "",
         password: "",
     });
-    const [pfp, newPfp] = useState ({
-        pfp: "",
-    });
 
-    
+    const [mangaError, setMangaError] = useState(null);
+    const [mangaInfo, setMangaInfo] = useState({
+        name: "",
+        autor: "",
+        caption: "",
+        thumbnail: "",
+        pages: []
+    }) 
     
 
     useEffect(() => {
@@ -42,12 +46,17 @@ export const AuthContextProvider = ({ children }) => {
         setLoginInfo(info);
     }, [])
 
+    const updateMangaInfo = useCallback((info) => {
+        setMangaInfo(info)
+    }, [])
+
     const updatePfp = useCallback((info) => {
         newPfp(info);
     })
 
     const registerUser = useCallback(async(e) => {
         e.preventDefault()
+
         setIsRegisterLoading(true)
         setRegisterError(null)
         const res = await postRequest(
@@ -88,27 +97,25 @@ export const AuthContextProvider = ({ children }) => {
         setUser(res)
     }, [loginInfo])
 
-
-    const setPfp = useCallback(async(e) => {
+    const postManga = useCallback(async(e) => {
         e.preventDefault()
 
-        const file = e.target.file
-        const fr = new FileReader();
-        console.log(file)
-        const altfile = document.getElementById("fileEl")
-        fr.readAsDataURL(altfile.files[0])
-        fr.addEventListener('load', () => {
-            const url = fr.result;
-            console.log(url);
-        })
+        setMangaInfo(prev => ({
+            ...prev,
+            autor: user._Id
+        }))
 
-        const cart = localStorage.getItem("user")
-        cart.pfp = url
-        
-        localStorage.setItem("User", JSON.stringify(cart))
-        console.log(cart);
+        const res = await postRequest(
+            `${baseurl}/m/post`,
+            JSON.stringify(mangaInfo)
+        )
 
-    }, [pfp])
+        if(res.error)
+            return setMangaError(res)
+    })
+
+
+
 
 
     const logoutUser = useCallback(() => {
@@ -129,7 +136,9 @@ export const AuthContextProvider = ({ children }) => {
                 loginInfo,
                 updateLoginInfo,
                 isLoginLoading,
-                setPfp,
+                mangaInfo,
+                mangaError,
+                updateMangaInfo,
             }}>
                 {children}
             </AuthContext.Provider>

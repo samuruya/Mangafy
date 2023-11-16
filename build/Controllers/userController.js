@@ -23,6 +23,8 @@ const registerUser = async(req, res) => {
         
         if(tagger) 
             return res.status(400).json("this name is already taken"); // error msg if email is already taken
+
+        
         //validating user input
         if(!tag || !email || !password || !regToken) 
             return res.status(400).json("please fill all the fields");

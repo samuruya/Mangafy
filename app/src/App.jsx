@@ -17,11 +17,11 @@ function App() {
   const { user } = useContext(AuthContext)
   return (
     <>
-      <Stack direction="vertical" style={{width: '100%'}}>
+      <Stack direction="vertical" className='root-stack'>
       <Nav />
-      <div>
+      <div className='page-body' style={{width: '100%', height: '100%'}}>
       <Routes>
-        <Route path="/" element = {user ? <Hub/> : <Login/>} />
+        <Route path="/" element =  {<Hub/>} />
         <Route path="/Login" element = {user ? <Hub/> : <Login/>} />
         <Route path="/Register" element = {user ? <Hub/> : <Register/>} />
         <Route path="/u" element = {user ? <U/> : <Register/>}/>

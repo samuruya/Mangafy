@@ -8,10 +8,10 @@ const Login = () => {
     const {loginUser, loginError, loginInfo, updateLoginInfo, isLoginLoading} = useContext(AuthContext)
     return ( 
     <>
-        <Form onSubmit={loginUser}>
+        <Form onSubmit={loginUser} className="log-form">
             <Row className="form-reg-row">
                 <Col xs={6} className="log-a">
-                <Stack gap={3}>
+                <Stack gap={3} className="log-stack">
                     <h2>Login</h2>
 
                     <div>
@@ -34,10 +34,7 @@ const Login = () => {
                     <Link to="/Register">Im New</Link>
                 </Stack>
                 </Col>
-                <Col className="log-b">
-                    <img src="https://i.ibb.co/K2KztLQ/svgviewer-png-output.png" alt="" />
-                    <h2>Welcome Back</h2>
-                </Col>
+
             </Row>
         </Form>
 
@@ -46,4 +43,4 @@ const Login = () => {
     );
 }
  
-export default Login;
+export default Login; 

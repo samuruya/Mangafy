@@ -8,10 +8,10 @@ const Register = () => {
     const {registerInfo, updateRegisterInfo, registerUser, registerError, isRegisterLoading} = useContext(AuthContext)
     return ( <>
         
-        <Form onSubmit={registerUser}>
+        <Form onSubmit={registerUser} className="log-form">
             <Row className="form-reg-row">
                 <Col xs={6} className="log-a">
-                <Stack gap={3}>
+                <Stack gap={3} className="log-stack">
                     <h2>Register</h2>
                     <div>
                     <h3>Name</h3>
@@ -44,12 +44,7 @@ const Register = () => {
                 </Stack>
 
                 </Col>
-                <Col className="log-b">
-                    <div className="img-cont">
-                        <img src="https://i.ibb.co/9sgTJPK/svgviewer-png-output.png" alt="" />
-                    </div>
-                    <h2>Join Now!</h2>
-                </Col>
+
             </Row>
         </Form>
     </>);
